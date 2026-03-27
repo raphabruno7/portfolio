@@ -1,38 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import Container from "@/components/Container";
 import LatestEntriesGrid from "@/components/entries/LatestEntriesGrid";
-import LatestEntriesList from "@/components/entries/LatestEntriesList";
 import Page from "@/components/layouts/Page";
 import { getEntries } from "@/utils/entries";
-import { compareDesc } from "date-fns";
 import Link from "next/link";
 import config from "@/../portfolio.config";
 import SocialButtons from "@/components/SocialButtons";
-import LatestPhotosGrid from "@/components/photos/LatestPhotosGrid";
-import { getAlbums } from "@/utils/photos";
 import TechStackGrid from "@/components/TechStackGrid";
 
 const HomePage = async () => {
-  const posts = await getEntries("posts");
   const projects = await getEntries("projects");
-  const albums = await getAlbums();
-
-  const latestPosts = posts
-    .reverse()
-    .sort((a, b) =>
-      compareDesc(new Date(a.frontmatter.date), new Date(b.frontmatter.date)),
-    )
-    .slice(0, 8);
 
   const featuredProjects = projects
     .sort((a, b) =>
       (a.frontmatter.ordering || 0) <= (b.frontmatter.ordering || 0) ? -1 : 1,
     )
     .filter((entry) => entry.frontmatter.featured === true);
-
-  const latestPhotos = albums.slice(0, 8).map((album) => {
-    return album.photos[0];
-  });
 
   return (
     <Page>
@@ -126,24 +109,6 @@ const HomePage = async () => {
             title="Featured Projects"
             urlPrefix="/projects"
             linkText="See All Projects"
-          />
-        </section>
-        {/* Photos */}
-        <section className="border-t border-t-black py-8 lg:py-16 xl:py-20">
-          <LatestPhotosGrid
-            photos={latestPhotos}
-            title="Recent Photos"
-            linkUrl="/photos/albums"
-            linkText="See All Photos"
-          />
-        </section>
-        {/* Entries */}
-        <section className="border-t border-t-black py-8 lg:py-16 xl:py-20">
-          <LatestEntriesList
-            entries={latestPosts}
-            title="Latest Posts"
-            urlPrefix="/blog"
-            linkText="See All Posts"
           />
         </section>
         <TechStackGrid />
