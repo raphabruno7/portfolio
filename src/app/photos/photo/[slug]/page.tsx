@@ -98,7 +98,7 @@ const generateMetadata = async ({ params }: Props) => {
       photo?.exif?.description ||
       photo?.exif?.fileName ||
       "Photo",
-    description: photo?.exif?.description || "A photo by Timmy O'Mahony",
+    description: photo?.exif?.description || "A photo by Raphael Bruno",
     openGraph: {
       images: [
         {

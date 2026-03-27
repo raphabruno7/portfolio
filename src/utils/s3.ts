@@ -46,7 +46,16 @@ const streamToString = (stream): Promise<string> => {
  * Get a list of all objects in the S3 bucket
  *
  */
+const isS3Configured = () => {
+  const required = ["AWS_ENDPOINT", "AWS_REGION", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_BUCKET"];
+  return required.every((key) => !!process.env[key]);
+};
+
 const getS3Keys = async (): Promise<string[]> => {
+  if (!isS3Configured()) {
+    console.debug("S3 not configured, skipping photo fetch");
+    return [];
+  }
   console.debug("Fetching all S3 keys");
   const s3Client = createS3Client();
 

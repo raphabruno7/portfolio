@@ -1,12 +1,12 @@
 const config = {
-  url: "https://timmyomahony.com",
-  name: "Timmy O'Mahony",
-  byline: "An independent full-stack web developer from Ireland.",
-  linkedInUrl: "https://www.linkedin.com/in/timmy-omahony/",
-  blueskyUrl: "https://bsky.app/profile/timmy-omahony.bsky.social",
-  githubUrl: "https://github.com/timmyomahony",
-  email: "hey@timmyomahony.com",
-  repoUrl: "https://github.com/timmyomahony/timmyomahony-portfolio",
+  url: "https://raphaelbruno.dev",
+  name: "Raphael Bruno",
+  byline: "Software engineer based in Portugal.",
+  linkedInUrl: "https://www.linkedin.com/in/raphael-bruno-a3b76638a/",
+  blueskyUrl: "",
+  githubUrl: "https://github.com/raphabruno7",
+  email: "raphaelbruno.dev@proton.me",
+  repoUrl: "https://github.com/raphabruno7",
 };
 
 export default config;

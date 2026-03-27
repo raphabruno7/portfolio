@@ -109,7 +109,7 @@ const ProjectListPage = async () => {
 };
 
 export const metadata: Metadata = {
-  title: "Latest Work & Projects | Timmy O'Mahony",
+  title: "Latest Work & Projects | Raphael Bruno",
   description:
     "I've never had a real job and I don't have a CV, so here's a list of everything I've been working on recently",
 };

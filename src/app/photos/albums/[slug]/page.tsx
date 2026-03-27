@@ -45,7 +45,7 @@ const generateMetadata = async ({ params }: Props) => {
   const album = albums.find((album: Album) => album.slug === slug);
   return {
     title: album?.name || "Photo album",
-    description: album?.description || "A photo album by Timmy O'Mahony",
+    description: album?.description || "A photo album by Raphael Bruno",
     openGraph: {
       images: [
         {

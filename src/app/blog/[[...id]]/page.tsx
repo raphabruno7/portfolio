@@ -71,7 +71,7 @@ const generateStaticParams = async () => {
 export const dynamicParams = false;
 
 export const metadata: Metadata = {
-  title: "Blog posts & articles | Timmy O'Mahony",
+  title: "Blog posts & articles | Raphael Bruno",
   description: "Read my latest blog posts and articles - mostly tech",
 };
 
