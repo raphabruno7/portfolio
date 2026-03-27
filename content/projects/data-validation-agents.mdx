@@ -1,0 +1,34 @@
+---
+title: Data Validation Agents
+slug: data-validation-agents
+description: Three AI-powered agents for enterprise data quality — data validation, schema mapping, and Q&A monitoring. Built with FastAPI and Llama running locally.
+date: 2026-02-01
+featured: true
+ordering: 2
+url: https://github.com/raphabruno7/data-validation-agents
+image:
+  url: /project-data-validation-agents.jpg
+tags:
+  - python
+  - fastapi
+  - ai
+  - llama
+---
+
+# Data Validation Agents
+
+Three AI-powered FastAPI agents for enterprise L&D data quality — built to run fully locally with Ollama/Llama.
+
+### Discovery
+
+Enterprise learning & development teams deal with large volumes of training data — CSV and Excel files with inconsistent schemas, missing values, and misaligned column mappings. Manual validation was slow and error-prone. The challenge was to build a system that could automate quality checks, map schemas intelligently, and monitor Q&A answer quality — without sending sensitive data to external APIs.
+
+### Strategy
+
+Three specialised agents, each with a single responsibility, connected through a FastAPI backend. Llama runs locally via Ollama, keeping all data on-premise. The agents are designed to be used in sequence: validate first, then map the schema, then monitor the output quality. A human-in-the-loop review step is built into the schema mapping agent to catch edge cases before they propagate downstream.
+
+### Execution
+
+- **Agent 1 — Data Validator:** Ingests CSV and Excel files, runs 20+ automated quality checks, generates HTML reports with flagged issues
+- **Agent 2 — Schema Mapper:** Uses Llama locally to map source columns to target schemas, outputs confidence scores and surfaces low-confidence mappings for human review
+- **Agent 3 — Q&A Monitor:** Monitors training Q&A via WebSocket in real time, grades answer quality using Llama and flags responses below threshold

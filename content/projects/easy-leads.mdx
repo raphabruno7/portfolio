@@ -1,0 +1,34 @@
+---
+title: Easy Leads AI
+slug: easy-leads
+description: AI lead prospecting system for local businesses. Scrapes Instagram and Google Maps, scores AI agent potential, and generates actionable lead lists.
+date: 2026-03-23
+featured: true
+ordering: 3
+url: https://github.com/raphabruno7/easy-leads-ai
+image:
+  url: /project-easy-leads.png
+tags:
+  - python
+  - ai
+  - automation
+---
+
+# Easy Leads AI
+
+An AI-powered lead prospecting tool built for local businesses in Peniche — surf schools, restaurants, and real estate.
+
+### Discovery
+
+Local businesses in coastal towns like Peniche rely almost entirely on word of mouth and have no structured system for finding new customers or understanding their digital presence. There was a clear opportunity to build a tool that could automatically map the landscape — who is active, who is not, and who is most likely to benefit from AI-powered automation.
+
+### Strategy
+
+Rather than building a generic CRM import tool, the focus was on scoring each lead's readiness for AI agent adoption. The system scrapes Instagram profile metrics (followers, engagement, post frequency) and cross-references with Google Maps data to assess visibility. A scoring algorithm ranks businesses by their automation potential — so outreach effort goes where it matters most. Output feeds directly into Arcus CRM.
+
+### Execution
+
+- Built Python scrapers using Apify to pull Instagram profile data and phone numbers via Google Search
+- Implemented an activity scoring algorithm based on follower count, posting frequency, and engagement rate
+- Generated structured Excel outputs and visual HTML dashboards per niche (surf schools, restaurants, real estate)
+- Designed a hub interface (Easy Leads AI) to navigate between niche dashboards, deployed as a static site

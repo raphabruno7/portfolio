@@ -5,7 +5,6 @@
 
 # Content and git modules config
 .gitmodules
-content/
 
 # Dynamically generated
 public/robots.txt

@@ -1,0 +1,34 @@
+---
+title: Ambient Music Composer
+slug: ambient-music-composer
+description: A Frippertronics-inspired tape delay system for creating ambient music. Live mic input with EQ, tape delay, and half-speed WAV export — all in the browser.
+date: 2026-03-15
+featured: true
+ordering: 1
+url: https://ambient-composer.vercel.app
+image:
+  url: /project-ambient-composer.jpeg
+tags:
+  - javascript
+  - react
+  - audio
+---
+
+# Ambient Music Composer
+
+A browser-based tape delay system inspired by Brian Eno's Discreet Music (1975).
+
+### Discovery
+
+Most browser-based audio tools are either too simple or too complex for experimental music. There was a gap for a focused, tactile tool that could replicate the warmth of analog tape delay — directly in the browser, without plugins or installs. The reference point was Robert Fripp's Frippertronics system: two tape reels creating infinite, layered loops from a live signal.
+
+### Strategy
+
+The goal was to keep the interface as close to a physical tape machine as possible — a single signal chain: microphone → EQ → tape delay → export. No DAW complexity, no MIDI, no presets. Built with React and the Web Audio API to stay fully browser-native. The tape delay algorithm uses a circular buffer to simulate the physical reel-to-reel effect, with half-speed export to recreate the classic pitch-lowering characteristic of tape.
+
+### Execution
+
+- Built a real-time audio pipeline using the Web Audio API with mic input, 3-band EQ, and configurable tape delay
+- Implemented circular buffer-based delay to simulate analog tape behaviour
+- Added half-speed WAV export — the recorded output plays back at half pitch, characteristic of Eno's technique
+- Deployed on Vercel as a standalone web app, accessible from any device with a microphone
