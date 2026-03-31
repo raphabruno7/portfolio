@@ -1,0 +1,39 @@
+---
+title: Arcus CRM
+slug: arcus-crm
+description: AI-powered sales CRM with Kanban pipeline, contact management, and a conversational agent that creates deals, generates scripts, and analyses opportunities — built on Next.js and Supabase.
+date: 2026-03-29
+featured: true
+ordering: 2
+url: https://github.com/raphabruno7/arcus-crm
+image:
+  url: /project-arcus-crm.gif
+tags:
+  - nextjs
+  - react
+  - typescript
+  - supabase
+  - ai
+---
+
+# Arcus CRM
+
+<img src="/project-arcus-crm.gif" alt="Arcus CRM dashboard navigation" style={{borderRadius: '12px', width: '100%', maxWidth: '480px', display: 'block', margin: '0 auto 2rem'}} />
+
+A full-stack CRM for sales teams with an embedded AI agent, visual Kanban pipeline, and a public REST API for external integrations.
+
+### Discovery
+
+Most CRM tools are either too generic or too heavy for small sales teams. The specific gap was a system that could handle the full sales cycle — contacts, deals, pipeline stages, activities — while being fast to deploy and genuinely useful rather than just a place to dump data. The key insight was that the bottleneck for sales teams is not data entry but decision-making: when to follow up, what to say, which deal deserves attention today. That pointed toward a CRM where the AI is a first-class feature, not an add-on.
+
+### Strategy
+
+Built on Next.js App Router with Supabase as the backend, so the entire system deploys to Vercel in minutes via an installation wizard. The AI layer uses the Vercel AI SDK, which allows switching between Google Gemini, OpenAI, and Anthropic models from the settings panel without touching code. The pipeline is a multi-board Kanban with configurable stages, goals, and custom fields per board — flexible enough for different sales motions without becoming a configuration maze.
+
+### Execution
+
+- Built a Kanban pipeline with drag-and-drop deal management, stage goals, and per-board custom fields
+- Integrated a conversational AI agent that creates contacts, moves deals, drafts emails, and generates sales scripts from natural language commands
+- Implemented a public REST API with API key authentication for inbound lead ingestion from n8n, Hotmart, and other automations
+- Added webhook support (inbound + outbound) for real-time pipeline events and external system notifications
+- Deployed with a first-run installation wizard that provisions the Supabase project, runs migrations, and creates the admin user — zero manual config
