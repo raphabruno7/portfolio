@@ -22,14 +22,16 @@ const EntryLargeGridListItem = ({
   return (
     <div className={`${className} group h-full`}>
       {entry.frontmatter.image && (
-        <Link className="block" href={url}>
-          <img
-            className={`duration-600 mb-4 grayscale transition ease-in-out group-hover:grayscale-0 ${!showBorder ? "border border-transparent transition-all duration-500 ease-in group-hover:border-ruby" : ""}`}
-            src={entry.frontmatter.image.url}
-            alt={entry.frontmatter.title}
-            width={900}
-            height={600}
-          />
+        <Link className="mb-4 block overflow-hidden" href={url}>
+          <div className="aspect-[3/2] w-full overflow-hidden">
+            <img
+              className={`duration-600 h-full w-full object-cover grayscale transition ease-in-out group-hover:grayscale-0 ${!showBorder ? "border border-transparent transition-all duration-500 ease-in group-hover:border-ruby" : ""}`}
+              src={entry.frontmatter.image.url}
+              alt={entry.frontmatter.title}
+              width={900}
+              height={600}
+            />
+          </div>
         </Link>
       )}
       <div className="flex-grow">

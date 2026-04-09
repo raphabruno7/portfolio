@@ -38,16 +38,6 @@ export default function Nav() {
               <li>
                 <Link
                   className={`block hover:text-ruby hover:underline ${
-                    pathname.startsWith("/blog/") ? "underline" : ""
-                  }`}
-                  href="/blog/"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`block hover:text-ruby hover:underline ${
                     pathname.startsWith("/projects/") ? "underline" : ""
                   }`}
                   href="/projects/"
@@ -58,11 +48,21 @@ export default function Nav() {
               <li>
                 <Link
                   className={`block hover:text-ruby hover:underline ${
-                    pathname.startsWith("/photos/") ? "underline" : ""
+                    pathname.startsWith("/how-we-work/") ? "underline" : ""
                   }`}
-                  href="/photos/albums/"
+                  href="/how-we-work/"
                 >
-                  Photos
+                  Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`block hover:text-ruby hover:underline ${
+                    pathname.startsWith("/beyond-the-work/") ? "underline" : ""
+                  }`}
+                  href="/beyond-the-work/"
+                >
+                  Rapha
                 </Link>
               </li>
             </ul>
