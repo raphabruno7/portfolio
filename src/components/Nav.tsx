@@ -65,6 +65,16 @@ export default function Nav() {
                   Rapha
                 </Link>
               </li>
+              <li>
+                <Link
+                  className={`block hover:text-ruby hover:underline ${
+                    pathname.startsWith("/negocios-locais") ? "underline" : ""
+                  }`}
+                  href="/negocios-locais"
+                >
+                  Negócios Locais
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
