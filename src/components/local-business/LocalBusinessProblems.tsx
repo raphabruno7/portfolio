@@ -2,7 +2,9 @@ import { Lang } from "./LocalBusinessPage";
 
 const content = {
   pt: {
-    heading: "Onde é que o tempo vai embora?",
+    heading: "O problema que ninguém resolve.",
+    intro:
+      "Não é falta de clientes. É que o negócio está sempre a perder receita em silêncio — nos momentos em que ninguém está a olhar.",
     problems: [
       {
         title: "Atendimento",
@@ -27,7 +29,9 @@ const content = {
     ],
   },
   en: {
-    heading: "Where does the time go?",
+    heading: "The problem nobody solves.",
+    intro:
+      "It's not a lack of clients. It's that your business is silently losing revenue — in the moments when nobody is watching.",
     problems: [
       {
         title: "Missed enquiries",
@@ -62,7 +66,10 @@ const LocalBusinessProblems = ({ lang }: Props) => {
 
   return (
     <section className="my-8 md:my-12 lg:my-16">
-      <h2 className="heading-1 mb-10 md:w-1/2">{t.heading}</h2>
+      <div className="mb-10 flex flex-col gap-4 md:flex-row md:gap-16">
+        <h2 className="heading-1 md:w-1/2">{t.heading}</h2>
+        <p className="body-2 md:w-1/2 md:self-end">{t.intro}</p>
+      </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
         {t.problems.map((problem) => (
           <div key={problem.title}>

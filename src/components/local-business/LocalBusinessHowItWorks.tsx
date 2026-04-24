@@ -3,59 +3,61 @@ import { Lang } from "./LocalBusinessPage";
 const content = {
   pt: {
     heading: "Como funciona",
+    badge: "Ativo em menos de 1 semana",
     steps: [
       {
         number: "01",
         title: "Conversa gratuita",
         description:
-          "20 minutos para perceber o negócio, o que está a correr bem e o que está a roubar tempo.",
+          "20 minutos para perceber o negócio, o que está a correr bem e o que está a roubar tempo. Sem IT, sem preparação.",
       },
       {
         number: "02",
         title: "Diagnóstico",
         description:
-          "Identificamos as tarefas com maior impacto para automatizar e apresentamos uma proposta clara.",
+          "Identificamos as tarefas com maior impacto para automatizar e apresentamos uma proposta clara — com custo, prazo e resultado esperado.",
       },
       {
         number: "03",
         title: "Implementação",
         description:
-          "Configuramos e testamos tudo em 1 a 2 semanas. Sem jargão, sem surpresas.",
+          "Configuramos e testamos tudo em 1 a 2 semanas. O negócio continua a funcionar normalmente durante o processo.",
       },
       {
         number: "04",
         title: "Funciona",
         description:
-          "O sistema trabalha por si, 24/7. Raphael fica disponível para suporte e ajustes.",
+          "O sistema trabalha por si, 24/7. Raphael fica disponível para suporte, ajustes e melhorias contínuas.",
       },
     ],
   },
   en: {
     heading: "How it works",
+    badge: "Live in less than 1 week",
     steps: [
       {
         number: "01",
         title: "Free conversation",
         description:
-          "20 minutes to understand your business, what's working well, and what's eating your time.",
+          "20 minutes to understand your business, what's working, and what's eating your time. No IT, no preparation needed.",
       },
       {
         number: "02",
         title: "Diagnosis",
         description:
-          "We identify the highest-impact tasks to automate and present a clear proposal.",
+          "We identify the highest-impact tasks to automate and present a clear proposal — with cost, timeline, and expected outcome.",
       },
       {
         number: "03",
         title: "Implementation",
         description:
-          "We set up and test everything in 1 to 2 weeks. No jargon, no surprises.",
+          "We set up and test everything in 1 to 2 weeks. Your business keeps running normally throughout.",
       },
       {
         number: "04",
         title: "It works",
         description:
-          "The system runs for you, 24/7. Raphael remains available for support and adjustments.",
+          "The system runs for you, 24/7. Raphael remains available for support, adjustments, and ongoing improvements.",
       },
     ],
   },
@@ -70,7 +72,12 @@ const LocalBusinessHowItWorks = ({ lang }: Props) => {
 
   return (
     <section className="my-8 md:my-12 lg:my-16">
-      <h2 className="heading-1 mb-10">{t.heading}</h2>
+      <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <h2 className="heading-1">{t.heading}</h2>
+        <span className="inline-block rounded-full border border-black px-3 py-1 font-mono text-xs font-medium">
+          {t.badge}
+        </span>
+      </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {t.steps.map((step) => (
           <div key={step.number} className="flex flex-col">

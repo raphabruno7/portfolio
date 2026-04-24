@@ -5,18 +5,16 @@ import { Lang } from "./LocalBusinessPage";
 const content = {
   pt: {
     eyebrow: "Silver Coast · Portugal",
-    headline:
-      "O seu negócio perde horas todos os dias com tarefas que podiam estar automáticas.",
-    body: "Raphael Bruno é developer e especialista em automação. Trabalha com restaurantes, clínicas, guest houses, imobiliárias e escritórios na Silver Coast — negócios que querem trabalhar melhor, sem contratar mais.",
+    headline: "O seu negócio nunca mais perde um cliente. Nem às 23h.",
+    body: "Raphael Bruno cria sistemas de automação para negócios locais na Silver Coast — para que as marcações cheguem, os leads sejam respondidos e o follow-up aconteça, mesmo quando a equipa está ocupada ou o escritório está fechado.",
     cta: "Sessão gratuita de 20 min",
     ctaSecondary: "Falar no WhatsApp",
     note: "Sem compromisso. Apenas uma conversa.",
   },
   en: {
     eyebrow: "Silver Coast · Portugal",
-    headline:
-      "Your business loses hours every day on tasks that could run automatically.",
-    body: "Raphael Bruno is a developer and automation specialist. He works with restaurants, clinics, guest houses, estate agents, and law offices across the Silver Coast — businesses that want to work smarter, without hiring more people.",
+    headline: "Your business never loses a client again. Not even at 11pm.",
+    body: "Raphael Bruno builds automation systems for local businesses across the Silver Coast — so bookings come in, leads get answered, and follow-up happens even when your team is busy or your office is closed.",
     cta: "Free 20-min session",
     ctaSecondary: "Message on WhatsApp",
     note: "No commitment. Just a conversation.",
