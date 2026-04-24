@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import Container from "@/components/Container";
+import Page from "@/components/layouts/Page";
 import LocalBusinessPage from "@/components/local-business/LocalBusinessPage";
 
 export const metadata: Metadata = {
@@ -8,7 +10,13 @@ export const metadata: Metadata = {
 };
 
 const NegociosLocaisPage = () => {
-  return <LocalBusinessPage />;
+  return (
+    <Page>
+      <Container>
+        <LocalBusinessPage />
+      </Container>
+    </Page>
+  );
 };
 
 export default NegociosLocaisPage;
