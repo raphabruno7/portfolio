@@ -6,53 +6,27 @@ const content = {
     services: [
       {
         title: "Atendimento WhatsApp 24/7",
-        description:
-          "Responde a perguntas frequentes, qualifica leads e tria pedidos sem interromper a equipa.",
+        description: "Responde, qualifica e tria pedidos sem interromper a equipa. O negócio nunca fica sem resposta.",
       },
       {
-        title: "Agendamento automático",
-        description:
-          "Marcações via WhatsApp integradas com o calendário. Sem telefonemas, sem e-mails.",
-      },
-      {
-        title: "Confirmações e remarcações",
-        description:
-          "Confirma 24h antes, remarca automaticamente se o cliente não puder.",
-      },
-      {
-        title: "Qualificação de leads",
-        description:
-          "Filtra quem vale uma reunião antes de chegar ao humano. Menos tempo perdido.",
+        title: "Agendamento e confirmações",
+        description: "Marcações via WhatsApp integradas com o calendário. Confirmação automática 24h antes. Remarcação se o cliente não puder.",
       },
       {
         title: "Follow-up automático",
-        description:
-          "Lembra honorários, visitas agendadas, renovações e check-ins. Nada fica por fazer.",
+        description: "Lembra consultas, visitas, renovações e check-ins no momento certo. Sem depender de memória ou Post-its.",
       },
       {
-        title: "CRM com sync automático",
-        description:
-          "Pipeline de vendas com actividades registadas sem entrada manual.",
+        title: "Qualificação de leads",
+        description: "Filtra quem vale uma reunião antes de chegar a si. Menos tempo em conversas que não convertem.",
       },
       {
-        title: "Prospecção activa B2B",
-        description:
-          "Identificação e contacto com potenciais clientes locais via WhatsApp.",
+        title: "CRM e pipeline de vendas",
+        description: "Actividades registadas automaticamente. Pipeline actualizado sem entrada manual. Histórico sempre acessível.",
       },
       {
-        title: "Campanhas WhatsApp",
-        description:
-          "Envio segmentado para a base de contactos: promoções, reactivação, novidades.",
-      },
-      {
-        title: "Portal web do cliente",
-        description:
-          "Portal personalizado para o negócio com informação centralizada.",
-      },
-      {
-        title: "Migração de dados",
-        description:
-          "Migração de Excel, Sheets ou CRM antigo para sistema novo, sem perder informação.",
+        title: "Campanhas e prospecção",
+        description: "Envio segmentado para a base de contactos e identificação activa de novos clientes locais via WhatsApp.",
       },
     ],
   },
@@ -61,53 +35,27 @@ const content = {
     services: [
       {
         title: "WhatsApp Support 24/7",
-        description:
-          "Answers FAQs, qualifies leads, and triages requests without interrupting your team.",
+        description: "Responds, qualifies, and triages requests without interrupting your team. Your business is never left without a reply.",
       },
       {
-        title: "Automatic Scheduling",
-        description:
-          "Bookings via WhatsApp integrated with your calendar. No calls, no emails.",
+        title: "Scheduling and confirmations",
+        description: "Bookings via WhatsApp integrated with your calendar. Automatic confirmation 24h before. Rescheduling if the client can't make it.",
       },
       {
-        title: "Confirmations & Rescheduling",
-        description:
-          "Confirms 24h in advance, reschedules automatically if the client can't make it.",
+        title: "Automatic follow-up",
+        description: "Reminds clients about appointments, visits, renewals, and check-ins at the right moment. No memory or Post-its needed.",
       },
       {
-        title: "Lead Qualification",
-        description:
-          "Filters who's worth a meeting before they reach you. Less time wasted.",
+        title: "Lead qualification",
+        description: "Filters who's worth a meeting before they reach you. Less time on conversations that don't convert.",
       },
       {
-        title: "Automatic Follow-up",
-        description:
-          "Reminds clients about fees, appointments, renewals, and check-ins. Nothing falls through.",
+        title: "CRM and sales pipeline",
+        description: "Activities logged automatically. Pipeline updated without manual entry. Full history always accessible.",
       },
       {
-        title: "CRM with Auto Sync",
-        description:
-          "Sales pipeline with activities logged automatically — no manual data entry.",
-      },
-      {
-        title: "Active B2B Prospecting",
-        description:
-          "Identify and reach out to local potential clients via WhatsApp.",
-      },
-      {
-        title: "WhatsApp Campaigns",
-        description:
-          "Segmented sends to your contact base: promotions, reactivation, news.",
-      },
-      {
-        title: "Client Web Portal",
-        description:
-          "A custom portal for your business with centralised information.",
-      },
-      {
-        title: "Data Migration",
-        description:
-          "Move from Excel, Sheets, or an old CRM to a new system without losing anything.",
+        title: "Campaigns and prospecting",
+        description: "Segmented sends to your contact base and active identification of new local clients via WhatsApp.",
       },
     ],
   },
@@ -123,13 +71,13 @@ const LocalBusinessServices = ({ lang }: Props) => {
   return (
     <section className="my-8 md:my-12 lg:my-16">
       <h2 className="heading-1 mb-10">{t.heading}</h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {t.services.map((service) => (
-          <div key={service.title} className="border border-black p-5 lg:p-6">
-            <h3 className="mb-2 font-mono text-sm font-medium uppercase tracking-wide">
-              {service.title}
-            </h3>
-            <p className="body-2 text-brown">{service.description}</p>
+          <div key={service.title}>
+            <h3 className="callout-1 mb-3">{service.title}</h3>
+            <p className="font-inter text-sm leading-relaxed text-brown md:text-base">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>

@@ -28,7 +28,9 @@ const LocalBusinessCTA = ({ lang }: Props) => {
   return (
     <section className="mb-16 flex flex-col items-start py-12 md:py-16 lg:py-24">
       <h2 className="heading-1 mb-6 md:w-2/3">{t.heading}</h2>
-      <p className="body-2 mb-8 md:w-1/2">{t.body}</p>
+      <p className="mb-8 font-inter text-sm leading-relaxed text-brown md:w-1/2 md:text-base">
+        {t.body}
+      </p>
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button
           href="https://cal.eu/raphael-bruno-92p2gw/sessao-diagnostico-20-min"
@@ -40,7 +42,9 @@ const LocalBusinessCTA = ({ lang }: Props) => {
           {t.ctaSecondary}
         </Button>
       </div>
-      <p className="mt-8 font-mono text-xs text-brown">{t.note}</p>
+      <p className="mt-8 font-overpass text-xs font-semibold uppercase tracking-widest text-brown">
+        {t.note}
+      </p>
     </section>
   );
 };
