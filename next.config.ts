@@ -121,6 +121,22 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/ai-agent-voice",
+        destination: "https://voice-demo-navy.vercel.app/ai-agent-voice/",
+      },
+      {
+        source: "/ai-agent-voice/",
+        destination: "https://voice-demo-navy.vercel.app/ai-agent-voice/",
+      },
+      {
+        source: "/ai-agent-voice/:path*",
+        destination: "https://voice-demo-navy.vercel.app/ai-agent-voice/:path*",
+      },
+    ];
+  },
 };
 
 // Configure MDX and plugins for regular .mdx pages within Next.js
