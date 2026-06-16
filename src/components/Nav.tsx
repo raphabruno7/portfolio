@@ -75,6 +75,16 @@ export default function Nav() {
                   Negócios Locais
                 </Link>
               </li>
+              <li>
+                <Link
+                  className={`block hover:text-ruby hover:underline ${
+                    pathname.startsWith("/ai-agent-voice") ? "underline" : ""
+                  }`}
+                  href="/ai-agent-voice"
+                >
+                  Voice Agent
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
