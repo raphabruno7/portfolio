@@ -47,6 +47,23 @@ const AboutPage = async () => {
           </div>
         </section>
 
+        {/* Experience */}
+        <section className="border-t border-t-black py-8 lg:py-16 xl:py-20">
+          <h2 className="heading-2 mb-8 lg:mb-12">Experience</h2>
+          <div className="flex flex-col gap-2 lg:w-8/12">
+            <p className="body-1">
+              <strong>Technical Collaboration — Podkite Analytics Limited</strong>
+            </p>
+            <p className="body-2 text-brown">
+              London, UK (remote) · Oct 2024 – Feb 2025
+            </p>
+            <p className="body-1 mt-2">
+              Integrated APIs and synced podcast download, chart-ranking, and
+              search-performance data across the platform.
+            </p>
+          </div>
+        </section>
+
         {/* Why work with me */}
         <section className="border-t border-t-black py-8 lg:py-16 xl:py-20">
           <h2 className="heading-2 mb-8 lg:mb-12">Why work with me?</h2>
@@ -101,7 +118,7 @@ const AboutPage = async () => {
             transparent and realistic path to getting your idea built.{" "}
             <Link
               className="underline"
-              href="mailto:raphaelbruno.dev@proton.me"
+              href="mailto:work@raphaelbruno.dev"
             >
               Send me an email →
             </Link>

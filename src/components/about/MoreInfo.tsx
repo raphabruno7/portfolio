@@ -27,7 +27,7 @@ export default function MoreInfo() {
           <br />
           <br />
           Want to chat? →{" "}
-          <Link className="underline" href="mailto:raphaelbruno.dev@proton.me">
+          <Link className="underline" href="mailto:work@raphaelbruno.dev">
             Send me an email
           </Link>
         </p>
