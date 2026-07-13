@@ -73,7 +73,7 @@ const HowWeWorkPage = () => {
             To get the ball rolling,{" "}
             <Link
               className="underline"
-              href="mailto:raphaelbruno.dev@proton.me"
+              href="mailto:work@raphaelbruno.dev"
             >
               send me a short email
             </Link>{" "}

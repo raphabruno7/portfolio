@@ -5,7 +5,7 @@ const config = {
   linkedInUrl: "https://www.linkedin.com/in/raphael-bruno-a3b76638a/",
   blueskyUrl: "",
   githubUrl: "https://github.com/raphabruno7",
-  email: "raphaelbruno.dev@proton.me",
+  email: "work@raphaelbruno.dev",
   repoUrl: "https://github.com/raphabruno7",
 };
 

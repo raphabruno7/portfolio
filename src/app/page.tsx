@@ -40,8 +40,10 @@ const HomePage = async () => {
               <Link className="font-medium hover:underline" href="/projects/">
                 products
               </Link>{" "}
-              and AI-powered automations to local business. I turn complex ideas
-              into clean, working software — end to end. Read a bit more{" "}
+              end to end — databases, authentication, front-end — and the AI
+              agents and automations that run them. I architect features and
+              integrations for product teams, and design AI systems that
+              remove manual work for businesses. Read a bit more{" "}
               <Link className="font-medium hover:underline" href="/about/">
                 about me
               </Link>
