@@ -67,7 +67,7 @@ const ProjectListPage = async () => {
 export const metadata: Metadata = {
   title: "Latest Work & Projects | Raphael Bruno",
   description:
-    "I've never had a real job and I don't have a CV, so here's a list of everything I've been working on recently",
+    "AI automation systems, voice agents, and full-stack products built by Raphael Bruno — software engineer based in Portugal.",
 };
 
 export default ProjectListPage;
