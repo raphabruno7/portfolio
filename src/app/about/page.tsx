@@ -50,17 +50,53 @@ const AboutPage = async () => {
         {/* Experience */}
         <section className="border-t border-t-black py-8 lg:py-16 xl:py-20">
           <h2 className="heading-2 mb-8 lg:mb-12">Experience</h2>
-          <div className="flex flex-col gap-2 lg:w-8/12">
-            <p className="body-1">
-              <strong>Technical Collaboration — Podkite Analytics Limited</strong>
-            </p>
-            <p className="body-2 text-brown">
-              London, UK (remote) · Oct 2024 – Feb 2025
-            </p>
-            <p className="body-1 mt-2">
-              Integrated APIs and synced podcast download, chart-ranking, and
-              search-performance data across the platform.
-            </p>
+          <div className="flex flex-col gap-10 lg:w-8/12">
+            <div>
+              <p className="body-1">
+                <strong>AI Automation Engineer — Ressonance Labs</strong>
+              </p>
+              <p className="body-2 text-brown">
+                Lisbon, Portugal (remote) · Mar 2025 – Feb 2026
+              </p>
+              <p className="body-1 mt-2">
+                Led the build of a database and automation system that
+                consolidated supplier catalogs, client requests, and quote
+                generation into a single platform, with pipelines that detect
+                information gaps and trigger follow-ups automatically. The
+                client, a Lisbon renovation company previously limited to 3
+                or 4 projects at a time by manual coordination, doubled
+                capacity with no increase in headcount.
+              </p>
+            </div>
+            <div>
+              <p className="body-1">
+                <strong>Independent Developer, AI Automation — Freelance</strong>
+              </p>
+              <p className="body-2 text-brown">
+                Portugal / remote · Mid 2023 – Present
+              </p>
+              <p className="body-1 mt-2">
+                Design and build AI agents and automation that solve
+                operational bottlenecks for local businesses and
+                international clients: voice agents that handle inbound
+                calls 24/7 in multiple languages and qualify leads end-to-end,
+                WhatsApp agents for prospecting and booking confirmation, and
+                data-extraction pipelines that remove manual document entry
+                for construction and property-management teams.
+              </p>
+            </div>
+            <div>
+              <p className="body-1">
+                <strong>Technical Collaboration — Podkite Analytics Limited</strong>
+              </p>
+              <p className="body-2 text-brown">
+                London, UK (remote) · Oct 2024 – Feb 2025
+              </p>
+              <p className="body-1 mt-2">
+                Integrated APIs and synced podcast download, chart-ranking, and
+                search-performance data across the platform.
+              </p>
+            </div>
           </div>
         </section>
 

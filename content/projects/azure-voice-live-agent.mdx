@@ -1,0 +1,34 @@
+---
+title: Azure Voice Live Agent
+slug: azure-voice-live-agent
+description: Real-time, EU-compliant pt-PT voice agent on Microsoft Azure with native European Portuguese neural voice and function calling.
+date: 2026-06-20
+featured: true
+ordering: 2
+tags:
+  - azure
+  - fastapi
+  - websocket
+  - docker
+  - ai
+---
+
+# Azure Voice Live Agent
+
+A real-time pt-PT voice agent built on Microsoft Azure: streaming speech-to-speech with server-side VAD, barge-in, native European Portuguese neural voice, and function calling — running on Azure Voice Live API and Azure OpenAI, hardened for cost and built for EU data residency.
+
+### Discovery
+
+Most voice agent stacks route through US infrastructure and rely on synthesized or non-native accents for European Portuguese — a dealbreaker for clients who need EU data residency and a voice that actually sounds local. The gap was a stack that could run entirely within Microsoft's EU regions while keeping the low-latency, interruptible conversation feel of the best US-based platforms.
+
+### Strategy
+
+Azure Voice Live API handles the speech-to-speech pipeline natively, so there's no separate STT → LLM → TTS chain to orchestrate — it exposes server-side voice activity detection and barge-in out of the box. Azure OpenAI provides the reasoning and function calling. The service runs on Azure Container Apps for scale-to-zero economics, with idle, duration, and concurrency caps built in from day one to keep a runaway session from turning into a surprise bill.
+
+### Execution
+
+- Built the real-time streaming pipeline over WebSocket with Python and FastAPI, talking directly to Azure Voice Live API
+- Wired native European Portuguese neural voice output with server-side VAD and barge-in for natural interruption handling
+- Implemented function calling against Azure OpenAI for in-call actions (lookups, scheduling, handoff)
+- Added cost guards: idle timeout, max call duration, and concurrency caps enforced at the application layer
+- Deployed on Azure Container Apps with Docker, keeping the entire pipeline inside EU data residency boundaries
