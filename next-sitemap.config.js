@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const sitemapConfig = {
-  siteUrl: "https://timmyomahony.com",
+  siteUrl: "https://raphaelbruno.dev",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,

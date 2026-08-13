@@ -37,9 +37,26 @@ const ibm = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: config.name,
+  url: config.url,
+  jobTitle: "Software Engineer",
+  description: config.byline,
+  email: `mailto:${config.email}`,
+  sameAs: [config.linkedInUrl, config.githubUrl].filter(Boolean),
+};
+
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" className="h-full w-full">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${noto_serif.variable} ${overpass.variable} ${ibm.variable} m-0 h-full w-full bg-beige p-0 font-inter text-black selection:bg-ruby selection:text-beige`}
       >
@@ -80,12 +97,14 @@ const generateMetadata = async () => {
       card: "summary_large_image",
       title: config.byline,
       description: config.byline,
+      images: ["/profile.jpg"],
     },
     openGraph: {
       title: config.byline,
       description: config.byline,
       siteName: config.name,
       locale: "en-IE",
+      images: ["/profile.jpg"],
     },
     authors: [{ name: config.name, url: config.url }],
     creator: config.name,

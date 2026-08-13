@@ -1,0 +1,18 @@
+# Raphael Bruno
+
+> Software engineer based in Portugal, building AI agents (voice and chat), automation systems, and full-stack products.
+
+Raphael Bruno is a software engineer specializing in AI voice agents, LLM-powered automation, and product engineering. This site is his portfolio: selected projects, technical writing, and background.
+
+## Key pages
+
+- [About](https://raphaelbruno.dev/about/): background, experience, and skills.
+- [Projects](https://raphaelbruno.dev/projects/): case studies of shipped work, including AI voice agents, CRM automation, and data validation pipelines.
+- [Blog](https://raphaelbruno.dev/blog/): technical notes and write-ups, including practical lessons on building production voice AI agents.
+- [How We Work](https://raphaelbruno.dev/how-we-work/): engagement model for collaborators and clients.
+
+## Contact
+
+- Email: work@raphaelbruno.dev
+- LinkedIn: https://www.linkedin.com/in/raphael-bruno-a3b76638a/
+- GitHub: https://github.com/raphabruno7
