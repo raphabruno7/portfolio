@@ -1,0 +1,60 @@
+---
+title: "Voice AI in Production: Inside the Vapi x Anthropic Webinar"
+slug: vapi-anthropic-voice-ai-webinar
+description: "Notes from the Vapi x Anthropic webinar on building production-grade voice agents with Claude — architecture, guardrails, prompting, and real-world deployments."
+date: 2026-08-13
+published: true
+tags: [voice-ai, anthropic, vapi, claude, ai-agents]
+image:
+  url: /post-vapi-anthropic-voice-ai-webinar.png
+---
+
+I sat in on a webinar hosted by Anthropic with Nikhil, co-founder of Vapi — one of the largest Voice AI platforms, with over a billion calls handled and hundreds of thousands of developers building on it. Here's what stuck with me.
+
+## Why voice AI matters right now
+
+About 80% of people still prefer to just call a company when they need urgent help, and that experience is usually bad: long hold times, scripted menus, no real understanding of what you're asking for. On the business side, call center roles have around 40% annual turnover, which makes consistent, high-quality phone support genuinely hard to staff.
+
+What changed is the models. The intelligence curve has moved fast enough that agents which simply didn't work a year ago are now handling real production traffic. Vapi's pitch is to give companies a flexible "human interface" — building blocks you can combine and iterate on in hours instead of being locked into rigid, closed systems.
+
+Every voice agent breaks down into three layers: **listening** (speech-to-text), **intelligence** (the LLM deciding what to say), and **speaking** (text-to-speech). The interesting part — and where most of the hard problems live — is the intelligence layer.
+
+## Where Claude fits in
+
+On Vapi, Claude shows up in three flavors, each mapped to a different job:
+
+- **Haiku** handles tier-1 support — simple calls, quick lookups — the most cost-effective option that still follows guardrails reliably.
+- **Sonnet** is the sweet spot for live conversations: it stays on script, handles multi-step flows, and is fast enough for real-time voice. This is the model most production agents run on.
+- **Opus** is usually too slow for live calls, but excels at post-call work — updating a CRM, scoring sentiment — where accuracy matters more than latency.
+
+The two traits Nikhil kept coming back to were guardrail adherence (Claude pushes back on prompt injection and out-of-scope requests without extra configuration) and a natural conversational tone that holds up even when the call goes off-script. In the last 30 days alone, Vapi processed close to 5 million calls through Claude across thousands of organizations — sales win-back, inbound support, collections, healthcare, and lead qualification being the most common use cases.
+
+## Real deployments
+
+A few production stories made the abstract stuff concrete:
+
+**Amazon Ring** evaluated 40 different vendors for their call center voice agent and couldn't get any of them to production — latency and telephony integration kept breaking. With Vapi, they launched in two weeks and now cover 100% of their call volume, with CSAT close to (or matching) human agents.
+
+**Kavak**, a large used-vehicle marketplace in Latin America, has around 200 internal employees building agents on the platform, running hundreds of workflows. Proactive follow-up calls and texts — including re-engaging leads who filled out a form and went cold — helped them roughly double revenue while cutting customer acquisition cost by about 50%.
+
+One vehicle subscription company stood out for handling *long* calls well: most voice agent calls run under two minutes, but theirs average five, working through multi-step flows and edge cases along the way — a good stress test for how well a model tracks context over a longer conversation.
+
+## Lessons from the fireside chat
+
+A few practical takeaways that applied beyond just this specific stack:
+
+**Shorter prompts win.** In an internal benchmark for the same task (booking an appointment), the best-performing prompt used 2.5x fewer words than the "good" one — more direct, no unnecessary confirmations. Smarter models need fewer explicit instructions and fewer edge-case call-outs, because they follow instructions better on their own. Prompts tend to grow over time as teams patch in new edge cases, but few people go back and simplify — the same discipline that applies to software applies to prompt engineering.
+
+**Don't script it word-for-word.** Rigid scripts consistently perform worse than a prompt built around a clear objective, guardrails on what *not* to do, and rough sequencing guidance. Locking the model into exact phrasing removes the flexibility it needs to keep the conversation natural.
+
+**Guardrails aren't optional in regulated industries.** Healthcare is the strictest case: a single wrong answer — even something as small as recommending an over-the-counter medication when that's off-limits — can carry a $1,000–$1,500 fine per call. The recommended approach layers two things: an explicit "don't go here" section in the prompt, plus deterministic checks (like regex filters) running on the platform before anything reaches the model. Model-based review adds too much latency for real-time voice, so it's reserved for edge cases rather than every message.
+
+**Latency comes mostly from output tokens.** The single biggest lever is keeping responses short — low reasoning "effort" settings and caching both help. As newer model versions ship, they tend to match the intelligence of the previous generation's larger model at lower latency, which keeps shrinking this constraint over time.
+
+**Warm transfers need planning, not luck.** Handing a call off to a human without making the customer repeat themselves usually means passing context via a tool call or a SIP INFO packet before the transfer happens — or having the agent brief the human first. It's a deliberate design decision, not something that falls out automatically.
+
+**Test like you'd red-team it.** Rather than relying on manual test calls, map out everything the agent can and can't do, turn that into an eval set of scenarios, and have an automated voice agent call in and try to break it — booking outside business hours, asking for things that are off-limits. These automated tests tend to be more aggressive than real customers, which is exactly the point.
+
+## Where this is heading
+
+Despite all the progress, voice AI still covers under 1% of the world's call minutes — this is early, not late. Nikhil's three-year bet is that the goal isn't a better chatbot; it's something people would genuinely rather just talk to instead of tapping through a screen. That's the bar worth building toward.

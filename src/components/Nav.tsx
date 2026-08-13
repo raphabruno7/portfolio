@@ -48,6 +48,16 @@ export default function Nav() {
               <li>
                 <Link
                   className={`block hover:text-ruby hover:underline ${
+                    pathname.startsWith("/blog/") ? "underline" : ""
+                  }`}
+                  href="/blog/"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`block hover:text-ruby hover:underline ${
                     pathname.startsWith("/how-we-work/") ? "underline" : ""
                   }`}
                   href="/how-we-work/"
