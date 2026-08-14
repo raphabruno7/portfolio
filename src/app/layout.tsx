@@ -93,6 +93,9 @@ const generateMetadata = async () => {
       template: `%s | ${config.name}`,
       default: `I'm Raphael Bruno, a software engineer based in Portugal.`,
     },
+    verification: {
+      google: "YunZw7wM2-7GNrFApEJShlAKmOWWIUBhIFr80RFE5Qw",
+    },
     twitter: {
       card: "summary_large_image",
       title: config.byline,
