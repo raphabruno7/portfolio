@@ -8,6 +8,7 @@ import { MDXEntry } from "@/types";
 import { getEntries } from "@/utils/entries";
 import { stripDescription } from "@/utils/mdx";
 import { notFound } from "next/navigation";
+import config from "@/../portfolio.config";
 
 const BlogDetailPage = async ({ params }) => {
   const entries = await getEntries("posts");
@@ -18,8 +19,26 @@ const BlogDetailPage = async ({ params }) => {
 
   const { default: MDXContent } = entry;
 
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: entry.frontmatter.title,
+    description: entry.frontmatter.description,
+    datePublished: entry.frontmatter.date,
+    dateModified: entry.frontmatter.lastUpdate || entry.frontmatter.date,
+    url: `${config.url}/blog/${entry.frontmatter.slug}/`,
+    author: { "@type": "Person", name: config.name, url: config.url },
+    ...(entry.frontmatter.image && {
+      image: `${config.url}${entry.frontmatter.image.url}`,
+    }),
+  };
+
   return (
     <Container>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       <article className="mb-12 lg:mb-32">
         <EntryHeader entry={entry} />
         <div className="mt-12 flex flex-col gap-8 lg:mt-24 lg:flex-row lg:gap-24">
@@ -52,6 +71,7 @@ const generateMetadata = async ({ params }) => {
   return {
     title,
     description,
+    alternates: { canonical: `/blog/${slug}/` },
   };
 };
 

@@ -49,6 +49,7 @@ const generateMetadata = async ({ params }) => {
   return {
     title,
     description,
+    alternates: { canonical: `/projects/${slug}/` },
   };
 };
 

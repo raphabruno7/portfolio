@@ -73,6 +73,7 @@ export const dynamicParams = false;
 export const metadata: Metadata = {
   title: "Blog posts & articles | Raphael Bruno",
   description: "Read my latest blog posts and articles - mostly tech",
+  alternates: { canonical: "/blog/" },
 };
 
 export { generateStaticParams };

@@ -68,6 +68,7 @@ export const metadata: Metadata = {
   title: "Latest Work & Projects | Raphael Bruno",
   description:
     "AI automation systems, voice agents, and full-stack products built by Raphael Bruno — software engineer based in Portugal.",
+  alternates: { canonical: "/projects/" },
 };
 
 export default ProjectListPage;

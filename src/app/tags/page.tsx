@@ -32,6 +32,7 @@ const TagListPage = async () => {
 export const metadata: Metadata = {
   title: "All tags from blog posts, photos, pages etc.",
   description: "See a list of all the tags from the website",
+  alternates: { canonical: "/tags/" },
 };
 
 export default TagListPage;

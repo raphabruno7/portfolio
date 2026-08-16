@@ -53,6 +53,7 @@ const generateMetadata = async () => {
   return {
     title: frontmatter.title,
     description: frontmatter.description,
+    alternates: { canonical: "/now/" },
   };
 };
 

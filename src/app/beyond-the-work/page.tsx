@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Beyond the Work — Raphael Bruno",
   description:
     "Music researcher, sound healer, meditator, longboard surfer. A few things about who I am outside of code.",
+  alternates: { canonical: "/beyond-the-work/" },
 };
 
 const items: Record<string, { text: string; sub?: string }[]> = {

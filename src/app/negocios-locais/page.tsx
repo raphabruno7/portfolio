@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Negócios Locais — Raphael Bruno",
   description:
     "Automação e presença digital para negócios locais na Silver Coast. Atendimento WhatsApp 24/7, agendamento automático, CRM e muito mais.",
+  alternates: { canonical: "/negocios-locais/" },
 };
 
 const NegociosLocaisPage = () => {

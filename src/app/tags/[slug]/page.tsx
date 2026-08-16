@@ -32,6 +32,7 @@ const generateMetadata = async (params) => {
   return {
     title: `Content from around the site tagged with ${slug}`,
     description: `See a list of recent content that I've tagged with ${slug}.`,
+    alternates: { canonical: `/tags/${slug}/` },
   };
 };
 

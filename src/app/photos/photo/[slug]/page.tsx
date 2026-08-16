@@ -99,6 +99,7 @@ const generateMetadata = async ({ params }: Props) => {
       photo?.exif?.fileName ||
       "Photo",
     description: photo?.exif?.description || "A photo by Raphael Bruno",
+    alternates: { canonical: `/photos/photo/${slug}/` },
     openGraph: {
       images: [
         {

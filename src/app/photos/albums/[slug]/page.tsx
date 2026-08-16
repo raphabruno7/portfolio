@@ -46,6 +46,7 @@ const generateMetadata = async ({ params }: Props) => {
   return {
     title: album?.name || "Photo album",
     description: album?.description || "A photo album by Raphael Bruno",
+    alternates: { canonical: `/photos/albums/${slug}/` },
     openGraph: {
       images: [
         {

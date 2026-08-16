@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "How We Work — Raphael Bruno",
   description:
     "A transparent process from first conversation to finished product.",
+  alternates: { canonical: "/how-we-work/" },
 };
 
 const steps = [

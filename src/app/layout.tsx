@@ -96,6 +96,9 @@ const generateMetadata = async () => {
     verification: {
       google: "YunZw7wM2-7GNrFApEJShlAKmOWWIUBhIFr80RFE5Qw",
     },
+    alternates: {
+      canonical: "/",
+    },
     twitter: {
       card: "summary_large_image",
       title: config.byline,

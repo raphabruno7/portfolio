@@ -1,5 +1,5 @@
 const config = {
-  url: "https://raphaelbruno.dev",
+  url: "https://www.raphaelbruno.dev",
   name: "Raphael Bruno",
   byline: "Software engineer based in Portugal.",
   linkedInUrl: "https://www.linkedin.com/in/raphael-bruno-a3b76638a/",
