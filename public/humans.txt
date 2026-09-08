@@ -1,8 +1,10 @@
-The one-man tech-team for event & experiential marketing agencies.
+AI Engineer & Automation Specialist based in Portugal.
 
-I'm a software developer helping tech-constrained creative teams pitch & deliver more ambitious brand activations and experiential marketing apps and experiences to their clients.
+I take generative-AI products from idea to production: multilingual voice agents,
+agent-assist systems, and automation for operational bottlenecks.
 
 Find me around the web:
 
-- https://www.linkedin.com/in/timmy-omahony/
-- https://github.com/timmyomahony
+- https://www.raphaelbruno.dev
+- https://www.linkedin.com/in/raphael-bruno-a3b76638a
+- https://github.com/raphabruno7
